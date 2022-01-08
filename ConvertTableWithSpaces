@@ -1,3 +1,5 @@
+/*Author and source: https://www.techtalkcorner.com/parquet-files-column-names-with-spaces/ */
+
 @concat(' 
 
 DECLARE @s VARCHAR(max) 
