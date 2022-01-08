@@ -8,7 +8,7 @@ DECLARE @tablename VARCHAR(500) = ''',item()['Object Name'],'''
 
  
 
-SELECT @s = ISNULL(@s + '', '','''') + ''['' + c.name + '']'' + '' as [''+replace(c.name,'' '','''')+''] '' 
+SELECT @s = ISNULL(@s + '', '','''') + ''['' + c.name + '']'' + '' as [''+replace(replace(c.name,'' '',''''),''-'','''')+''] '' 
 
 FROM sys.all_columns c join sys.tables t 
 
@@ -18,4 +18,4 @@ WHERE t.name =  @tablename
 
  
 
-SELECT ''select '' + @s + '' from '' +  @tablename  as Query')
+SELECT ''select '' + @s + '' from ['' +  @tablename + '']'' as Query')
