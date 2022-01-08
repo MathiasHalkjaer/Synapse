@@ -2,7 +2,7 @@
 
 DECLARE @s VARCHAR(max) 
 
-DECLARE @tablename VARCHAR(500) = ''01 JDM A_S$Customer'' 
+DECLARE @tablename VARCHAR(500) = ''',item()['Object Name'],''' 
 
  
 
@@ -16,4 +16,4 @@ WHERE t.name =  @tablename
 
  
 
-SELECT ''select '' + @s + '' from '' +  @tablename  as Query') 
+SELECT ''select '' + @s + '' from '' +  @tablename  as Query')
