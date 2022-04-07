@@ -1,0 +1,9 @@
+
+Failure code:
+Failed to load one or more resources due to No access, error code 403.
+
+Troubleshooting steps:
+- Contributor permission on Synapse Workspace
+- Contributor permission on Data Lake
+- Storage Blob Data Contributor permission on Data Lake
+- Access control role on Synapse Security settings (Manage -> Security -> Access control)
