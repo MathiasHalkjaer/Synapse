@@ -1,0 +1,9 @@
+Problem: Characters like æ, ø and å are not encoded correctly in Serverless query - showing as random signs like [%.!]
+
+Solution:
+
+Check collation    
+  SELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') AS Collation;
+
+Set new collation:
+   ALTER DATABASE [SQL-Serverless-Markman-Datahub] COLLATE Latin1_General_100_BIN2_UTF8;
