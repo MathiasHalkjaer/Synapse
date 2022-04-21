@@ -6,4 +6,6 @@ Check collation
   SELECT DATABASEPROPERTYEX(DB_NAME(), 'Collation') AS Collation;
 
 Set new collation:
-   ALTER DATABASE [SQL-Serverless-Markman-Datahub] COLLATE Latin1_General_100_BIN2_UTF8;
+   ALTER DATABASE [SQL-Serverless-Markman-Datahub] COLLATE Latin1_General_100_CI_AI_SC_UTF8;
+
+Alternatively, set collation on column level using External Tables
